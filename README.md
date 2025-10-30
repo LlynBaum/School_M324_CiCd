@@ -16,3 +16,21 @@ Multistage, damit nicht der ganze Sourcecode im Image drin ist, brauchen nur die
     - Registry auf `ghcr.io` setzten (im Image Name)
 6. Build Docker Image und resultat zur Registry Pushen
     - Das Dockerfile angeben, welches das Java Project builded
+
+Wen die Action gelaufen ist:
+![alt text](img/run.png)
+[GitHub Action Run](https://github.com/LlynBaum/School_M324_CiCd/actions/runs/18942254902/job/54083845402)
+
+# Resultat
+
+Das Image auf der GitHub Registry:
+![alt text](img/registry.png)
+
+Image local pullen:
+![alt text](img/pull.png)
+
+Container Running:
+![alt text](img/container-running.png)
+
+Website:
+![alt text](img/website.png)
