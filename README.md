@@ -18,13 +18,16 @@ Multistage, damit nicht der ganze Sourcecode im Image drin ist, brauchen nur die
     - Das Dockerfile angeben, welches das Java Project builded
 
 Wen die Action gelaufen ist:
-![alt text](img/run.png)
+![run](img/run.png)
 [GitHub Action Run](https://github.com/LlynBaum/School_M324_CiCd/actions/runs/18942254902/job/54083845402)
 
 # Resultat
 
 Das Image auf der GitHub Registry:
 ![alt text](img/registry.png)
+
+Das Image auf der Dockerhub Registry:
+![alt text](img/dockerhub.png)
 
 Image local pullen:
 ![alt text](img/pull.png)
