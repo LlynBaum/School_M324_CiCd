@@ -79,7 +79,12 @@ jobs:
 
       - name: Tag & push image to GHCR
         run: |
-          for tag in ${{ steps.meta-ghcr.outputs.tags }}; do
+          tags="${{ steps.meta-ghcr.outputs.tags }}"
+          echo "Tags for GHCR:"
+          echo "$tags"
+
+          for tag in $tags; do
+            echo "Tagging and pushing $tag"
             docker tag $LOCAL_IMAGE_REF:${{ github.sha }} "$tag"
             docker push "$tag"
           done
@@ -119,7 +124,12 @@ jobs:
 
       - name: Tag & push image to Docker Hub
         run: |
-          for tag in ${{ steps.meta-dh.outputs.tags }}; do
+          tags="${{ steps.meta-dh.outputs.tags }}"
+          echo "Tags for Docker Hub:"
+          echo "$tags"
+
+          for tag in $tags; do
+            echo "Tagging and pushing $tag"
             docker tag $LOCAL_IMAGE_REF:${{ github.sha }} "$tag"
             docker push "$tag"
           done
